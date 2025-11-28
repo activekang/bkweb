@@ -1,0 +1,67 @@
+#about,#portfolio1,#portfolio2,#portfolio3,#portfolio4,#portfolio5,#design,#design2,#contact{padding: 50px 0; height: 700px;} 
+/* 사용자 추가 스타일 */
+#pt_wrap{width: 1200px;margin: 0 auto; overflow: hidden;} 
+#pt_wrap h1,#pt_wrap h3{text-align: center; color:#333}
+#pt_wrap div{float: left;width: 596px;}
+#pt_wrap div img{width: 80%;   border-radius: 15px;border: 2px solid #999;
+box-shadow: 10px 10px 5px rgba(0,0,0,0.5);}
+#pt_wrap div ul{margin-top: 10px;margin-left: 30px;}
+#pt_wrap div ul li{height: 40px;line-height: 40px;   font-size: 18px;}
+#pt_wrap div button{width: 200px;height: 40px;    margin:50px 20px; border-radius: 20px;
+background-color: #aaa;color: #fff;    border: 0;cursor: pointer;font-weight: bold;
+transition: all 0.5s; font-size: 16px}
+#pt_wrap div button:last-child{background-color:#aaa;color:#fff;}
+#pt_wrap div button:hover{  background-color: rgb(7, 9, 162)}
+#pt_wrap div button:last-child:hover{        background-color: rgb(241, 59, 9)}
+
+/*about*/
+#about .container {	display:flex;  width:1000px;		}
+.ab_text{color:#666;}
+.ab_text:after{ content:'';display:block;clear:both	}
+.ab_text h1,.ab_skill h1{font-size: 26px;}
+.ab_text,.ab_skill{width: 500px;border:1px solid #333;
+border-radius:10px;	margin:10px;font-size: 12px;		}   
+.pro{overflow: hidden;margin-bottom: 5px;width:500px;color:#999}
+.pro .subject{float: left;width: 80px;height: 25px;line-height: 25px}
+.pro .progress{float: left;width: 360px;height: 25px;background: #eee;border: 1px solid #ccc;position: relative;border-radius: 10px}
+.pro .progress .bar{display: block;position: absolute;left:0;top:2px;height:21px;width: 0;border-radius:  10px}
+/* .pro:nth-child(1) .progress .bar{background: #00ff33;} */
+.pro:nth-child(2) .progress .bar{background: #0099ff;}
+.pro:nth-child(3) .progress .bar{ background: #ff6600;}
+.pro:nth-child(4) .progress .bar{background: #33cc00;}
+.pro:nth-child(5) .progress .bar{background:#cc66ff;}
+.pro:nth-child(6) .progress .bar{background:#eb1656;}
+.pro:nth-child(7) .progress .bar{background:#efcb16;}
+
+.pro .bar_txt{float: left;height: 22px;line-height: 22px;margin-left: 16px;}
+
+.mpop {border: 1px solid #ccc;
+box-sizing: border-box;border-radius: 10px;}
+.mpop a img{width: 100%;border-radius: 10px;}
+
+.msg {margin-top: 50px;}
+.msg p{font-size: 24px;margin-bottom: 20px;padding-left: 30px;}
+.msg li{font-size: 20px;margin-bottom: 10px;padding-left: 30px;}
+
+.gallery{
+    width: 960px; height: auto;
+    box-sizing: content-box;			border: 5px solid #ccc;
+    padding:10px 20px;			margin: auto; margin-top: 20px;
+
+}
+.gallery:after{content:'';display:block;clear:both}
+
+.gallery li{
+    width: 306px; height: 260px;	float: left; margin-right: 20px;
+border: 1px solid #999;box-sizing: border-box;    border-radius: 10px;
+position: relative;
+}
+.gallery li p{ 
+    width: 306px; height: 60px;position: absolute;left: 0;bottom: -70px;  
+background-color: rgba(0,0,0,1); color: #fff; font-size: 14px;
+text-align: center; transition: all 0.3s; opacity: 0;
+}
+.gallery li:hover p{ left: 0;bottom:0;opacity: 1;}
+
+.gallery li img{width:100%;height:100%; border-radius: 10px;}
+.gallery li:nth-child(3n){margin-right: 0;margin-bottom:5px;}
