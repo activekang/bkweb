@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nikeweb반응형</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/respond.css">
+    <script src="http://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="js/script.js"></script>
+ 
+    <style>  
+        #popp27 { position: relative;position: absolute; width:400px; height:630px; position: absolute; top:40%; left:50%; margin-top:-300px; margin-left:-200px; background:#fff; z-index:15000;}
+        /*가운데 정렬을 위한 값으로 전체 사이즈의 반을 마이너스로 입력*/
+        #popp27 .cont {width:400px; height:600px;}
+        #popp27 .close {width:400px; height:30px; background:#f3f3f3; line-height:30px; padding-left:0; font-size:13px;
+        color:#333}
+        #popp27 .close #close {float:right; margin-right:10px; cursor:pointer}
+        #mask {width:100%;height:100%;position:fixed;background: rgba(0,0,0,0.7) repeat;top:0;left:0;z-index:999}
+     </style>
+   
+        <script>
+            //쿠키검색함수
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0; i<ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1);
+                if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+            }
+            return "";
+        } 
+          //쿠키저장함수
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            var expires = "expires="+d.toUTCString();
+            document.cookie = cname + "=" + cvalue + "; " + expires;
+        } 
+        </script>
+        <script>
+        function couponClose(){
+            if($("input[name='chkbox']").is(":checked") ==true){
+                setCookie("close","Y",1);
+            }
+            $("#popp27").hide(); 
+            $("#mask").hide();
+        }
+        $(document).ready(function(){
+            cookiedata = document.cookie;
+            if(cookiedata.indexOf("close=Y")<0){
+                $("#popp27").show(); 
+            }else{
+                $("#popp27").hide(); 
+                $("#mask").hide();
+            }
+            $("#close").click(function(){
+                couponClose();
+            });
+        });
+        </script>
+</head>
+<body>
+    <div id="popp27">
+        <div class="cont">
+         <img src="images/pop.png" alt="광고이미지" border="0"></div>
+        <div class="close">
+        <form method="post" action="" name="pop_form"> 
+         <span id="check"><input type="checkbox" value="checkbox" name="chkbox" id="chkday"/><label for="chkday">오늘 하루동안 보지 않기</label></span>
+         <span id="close">닫기</span>
+        </form>
+       </div>
+      </div>
+      <div id="mask"></div>
+    <div id="header">
+        <div class="inner">
+            <h1 class="logo"><a href="#"><img src="images/logo.png" width="100" alt="logo"></a></h1>
+            <a href="#" class="gnb_btn">
+                <img src="images/gnb_btn.png" alt="menu">
+            </a>
+            <ul class="gnb"> 
+                <li><a href="#">MEN</a></li>
+                <li><a href="#">WOMEN</a></li>
+                <li><a href="#">BOYS</a></li>
+                <li><a href="#">GIRLS</a></li>
+            </ul>
+        </div>
+    </div><!--header-->
+    <div id="visual">
+        <div class="inner">
+            <div class="typo">
+                <p>STRIKE A BALANCE</p>
+                <p>Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. Deserunt, delectus.</p>
+            </div>
+        </div>
+    </div><!-- visual -->
+    <div id="container">
+        <div class="box b1">
+            <a href="#"><img src="images/n1.png" alt="n1"></a>
+            <p><strong>나이키</strong>뛰어난 활동성과 편리한 착용감</p>
+        </div>
+        <div class="box b2">
+            <a href="#"><img src="images/n2.png" alt="n2"></a>
+            <p><strong>나이키에어</strong>뛰어난 활동성과 편리한 착용감</p>
+        </div>
+        <div class="box b3">
+            <a href="#"><img src="images/n3.png" alt="n3"></a>
+            <p><strong>나이키</strong>뛰어난 활동성과 편리한 착용감</p>
+        </div>
+        <div class="box b4">
+            <a href="#"><img src="images/n4.png" alt="n4"></a>
+            <p><strong>기능성신발</strong>뛰어난 활동성과 편리한 착용감</p>
+        </div>
+        <div class="box b1">
+            <a href="#"><img src="images/n5.png" alt="n5"></a>
+            <p><strong>나이키에어맥스</strong>뛰어난 활동성과 편리한 착용감</p>
+        </div>
+        <div class="box b2">
+            <a href="#"><img src="images/n6.png" alt="n6"></a>
+            <p><strong>나이키에어</strong>뛰어난 활동성과 편리한 착용감</p>
+        </div>
+        <div class="box b3">
+            <a href="#"><img src="images/n7.png" alt="n7"></a>
+            <p><strong>나이키</strong>뛰어난 활동성과 편리한 착용감</p>
+        </div>
+        <div class="box b4">
+            <a href="#"><img src="images/n8.png" alt="n8"></a>
+            <p><strong>나이키</strong>뛰어난 활동성과 편리한 착용감</p>
+        </div>
+       
+    </div><!--container-->
+    <div id="shop">
+            <h2 class="tit">Shop by Sports</h2>
+            <div class="shopbox">
+                <a href="#"><img src="images/shop_01.jpg" alt="s1"></a>
+                <p>
+                    <strong>나이키 농구</strong>
+                    경기를 빛내줄 스타일  <em>구매하기</em>
+                </p>
+            </div>
+            <div class="shopbox">
+                <a href="#"><img src="images/shop_02.jpg" alt="s2"></a>
+                <p>
+                <strong>나이키 골프   </strong>
+                    골프 필드 위 자신감을 더해주는 스타일  <em>구매하기</em>
+                </p>
+            </div>
+            <div class="shopbox">
+                <a href="#"><img src="images/shop_03.jpg" alt="s3"></a>
+                <p>
+                <strong>나이키 테니스
+                </strong>
+                강력한 서브를 돋보이게 하는 스타일 <em>구매하기</em>
+                </p>
+            </div>
+    </div><!--shop-->
+    <div id="footer">
+        <div class="inner">
+            <p class="copyright">&copy; 2024 Nike Inc, All right reserved</p>
+        </div>
+    </div><!--footer-->
+</body>
+</html>
