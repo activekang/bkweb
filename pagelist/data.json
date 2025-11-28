@@ -1,0 +1,11 @@
+[  
+  {"item" : "네이버", "imgfile":"img/1.jpg", "link":"http://naver.com/"},
+  {"item" : "태권도협회", "imgfile":"img/2.jpg", "link":"http://raonolje.com/"},
+  {"item" : "펀투머로", "imgfile":"img/3.jpg", "link":"http://raonolje.com/"},
+  {"item" : "새만금홍보웹", "imgfile":"img/4.jpg", "link":"https://isaemangeum.co.kr/"},
+  {"item" : "애니밴드", "imgfile":"img/5.jpg", "link":"http://raonolje.com/"},
+  {"item" : "자동자웹", "imgfile":"img/6.jpg", "link":"http://plusg.co.kr/"},
+  {"item" : "네이버웹", "imgfile":"img/7.jpg", "link":"http://naver.com/"},
+  {"item" : "네이버웹2", "imgfile":"img/3.jpg", "link":"http://naver.com/"},
+  {"item" : "네이버3", "imgfile":"img/5.jpg", "link":"http://naver.com/"}
+]

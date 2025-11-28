@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>웹사이트상세정보Ajax&JSON활용</title>
+    <style>
+        *{margin: 0;padding: 0}
+        h1,h2{font-size: 16px}
+        h1{
+            text-align: center;
+            margin-bottom: 20px
+        }
+        #wrap{
+            width: 900px;           margin: 0 auto
+        }
+        #vis{
+		    height:894px;            overflow: hidden
+        }
+        #vis #siteview{
+            width: 900px;           text-align: center;
+            overflow: hidden
+        }
+        #vis #siteview > div{         width: 286px;
+            border: 2px solid #0066cc;
+            float: left;
+            margin-right: 10px;
+            border-radius: 10px;
+            padding: 10px 0
+        }
+		#vis #siteview > div >img {width:100%;height:226px}
+    </style>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $.ajax({
+            url:"data.json",
+            dataType:"json",
+            success:function(data){
+                //console.log(data);
+                var ele="";
+                $.each(data,function(index,obj){//?번 반복
+                    //console.log(index);
+                    //console.log(data[index]);
+                    //console.log(this);
+                    //console.log(obj.item);
+                    ele += "<div>";
+                    ele += "<h2>"+this.item+"</h2>";
+                    ele += "<img src='"+this.imgfile+"' alt='"+this.item+"'>";
+                    ele += "<div><a href='"+this.link+"'>상세정보</a></div>";
+                    ele += "</div>";
+                });
+                $("#siteview").append(ele);
+            },
+            error:function(request,status,error){
+                console.log(status+"/"+error);
+            }
+        });
+        $(function(){
+            var r;
+            function play(){
+                r = setInterval(function(){
+                    $("#siteview > div:first").insertAfter($("#siteview > div:last"));
+                },2500);
+            }
+            function stop(){
+                clearInterval(r);
+            }
+            $("#vis").hover(function(){
+                stop();
+            },function(){
+                play();
+            });
+            play();
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <h1></h1>
+        <div id="vis">
+            <div id="siteview">
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
