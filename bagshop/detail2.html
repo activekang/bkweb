@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상세페이지</title>
+    <link rel="stylesheet" href="css/detail2.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+    <div class="totop">
+        <a href="#top"><img src="img/btn_totop.png" alt="top"></a>
+    </div>
+    <div id="header">
+            <div class="headerwrap clear">
+               <h1 class="logo"><a href="index.html">Bag Shop Mall</a></h1>
+               <p class="menuBtn">menu</p>
+               <p class="search_bt">search</p>
+      
+                <nav class="nav">
+                  <ul class="clear">
+                      <li><a href="login.html">login</a></li>
+                      <li><a href="join.html">join</a></li>
+                      <li><a href="product.html">PRODUCT</a></li>
+                      <li><a href="order.html">ORDER</a></li>
+                      <li><a href="customer.html">CUSTOM</a></li>
+                  </ul>
+                </nav>
+            </div>
+            <!-- search폼 -->
+            <div class="search_wrap">
+              <form action="#" class="search_box">
+                  <fieldset>
+                      <legend class="blind">검색폼</legend>
+                      <input type="search" placeholder="검색어입력">
+                      <input type="image" class="searchBtn" src="img/total_SearchBtn.png" alt="검색">
+                  </fieldset> 
+              </form>
+            </div> <!-- search end-->
+    </div> <!-- header end-->
+    <!--  detail page -->
+    <section id="container8">
+     <h1>상품상세</h1>
+     <div class="con2">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="img/product_66.png" alt="product_5">
+                </a>
+            </li>
+            <li>
+                <form action="#" name="form1">
+                    <fieldset>
+                        <legend class="blind">가격계산폼</legend>
+                        <label for="su1">가격 : 135,000원</label>
+                        <input type="hidden" name="su1" id="su1" value="135000">    
+                        <br><br>
+                        <label for="su2"> 수량 : </label>
+                        <input type="number" name="su2" id="su2"
+                         min="1" max="10" start="1" value="1">
+                         <br><br>
+                        <select name="fColor" id="fc" onchange="fcolorChange()">
+                            <option value="--">색상선택</option>
+                            <option value="#272729">검은색</option>
+                            <option value="#aa5b22">브라운색</option>
+                            <option value="#666962">파란색</option>
+                            <option value="#886f47">갈색</option>
+                        </select>
+                        <br><br>
+                        <div class="tVal">color</div>
+                        <br>
+                        <input type="button" value="계산하기" onclick="calc(su1.value,su2.value)"> 
+                        <br><br>
+                        <label for="resVal">최종가격:</label>
+                        <input type="text" id="resVal">
+                        <br>
+                        <input type="button" id="basket" onclick="basketGo()" value="장바구니">
+                        &nbsp;<input type="button"  id="shopping" onclick="shopGo()" value="쇼핑계속">
+                    </fieldset>
+                </form>
+            </li>
+        </ul>
+     </div>
+     <div class="con3">
+        <h2>Detail View</h2>
+        <p>
+            <img src="img/detail2.jpg" alt="상세이미지">
+        </p>
+     </div>
+    </section>
+
+    <footer id="footer">
+        <div class="adver">
+            <p><img src="img/delivery.gif" alt="배송정보"></p>
+        </div>
+        <div class="sns">
+            <ul>
+                <li><a href="#">youtbe</a></li>
+                <li><a href="#">facebook</a></li>
+                <li><a href="#">twitter</a></li>
+                <li><a href="#">pinterest</a></li>
+                <li><a href="#">inicis</a></li>
+            </ul>
+        </div>
+        <div class="familySite">
+            <ul>
+                <li><a href="#">이용약관</a></li> 
+                <li><a href="#">개인정보 취급방침</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+        </div>
+        <div class="info">
+           <ul>
+            <li>(주)BAGSHOP대표 : 김길동</li>
+            <li>사업자동록번호 : 120-86-23450</li>
+            <li>통신판매등록번호 : 서울강남-4567호</li>
+            <li>개인정보보호책임자: 김길호팀장 
+                <a href="mailto:kimkh@bagshop.com">kimkh@bagshop.com</a></li>
+           </ul>
+           <p>copyright &copy; 2024 BAG-SHOPMALL all right reserved.</p> 
+        </div>
+    </footer> <!--footer end -->
+    <script src="js/common.js"></script> 
+    <script>
+        function basketGo(){
+         alert('장바구니이동할까요?');
+         location.href="order.html";
+        }
+        function shopGo(){
+         alert('쇼핑계속');
+         location.href="index.html";
+        }
+        function fcolorChange() {
+            var sel = document.getElementById('fc');
+        
+            var fValue;
+            for(var i=0;i<sel.options.length;i++){
+                if(sel.options[0].selected==true){
+                alert('색상선택');
+                return false;
+                }else if(sel.options[i].selected == true){
+                fValue = sel.options[i].value;
+                $('.tVal').text(fValue).css('background',''+fValue+'');
+                break;
+                }
+            } //for end
+        } 
+        function comma(num){
+            var len, point, str;  
+                
+            num = num + "";  
+            point = num.length % 3 ;
+            
+            len = num.length;  
+            
+            str = num.substring(0, point);  
+            while (point < len) {  
+                if (str != "") str += ",";  
+                str += num.substring(point, point + 3);  
+                point += 3;  
+            }  
+            
+            return str;
+        
+            }
+        
+        function calc(num,num2){
+            
+                var snum=num; //su1.value 135000
+                var snum2=num2; //su2.value 3
+        
+                var res =snum*snum2;   // 135000*3
+                var result = comma(res); //135,000
+                
+                /*document.getElementById("resVal").innerHTML=result+"원";*/
+                document.getElementById("resVal").value=result+"원";
+        }
+    </script>
+
+</body>
+</html>

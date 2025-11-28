@@ -1,0 +1,49 @@
+ /* footer */
+ #footer {width: 100%; background-color: #2765c4; color: #fff;}
+ #footer .adver{width: 100%; padding: 15px 0;
+     border-bottom:2px dashed #757776; background-color: #fff;}
+ #footer .adver img{ max-width: 60%;}
+ 
+ #footer .sns{ width: 100%; padding: 15px 0; margin-bottom: 15px;
+     background-color: #fff;}
+ #footer .sns ul li{display: inline-block; padding: 0 10px;}
+ #footer .sns ul li a{display: block;width: 32px;height: 32px;
+     background:no-repeat;text-indent: -9999em;}
+ 
+ #footer .sns  ul li:nth-child(1) a{
+     background-image: url(../img/ico_youtube.gif);
+     background-size: 100% 100%;
+ }
+ #footer .sns  ul li:nth-of-type(2) a{
+     background-image: url(../img/ico_facebook.gif);
+     background-size: 100% 100%;
+ }
+ #footer .sns  ul li:nth-of-type(3) a{
+     background-image: url(../img/ico_twitter.gif);
+     background-size: 100% 100%;
+ }
+ #footer .sns  ul li:nth-of-type(4) a{
+     background-image: url(../img/ico_pin.gif);
+     background-size: 100% 100%;
+ }
+ #footer .sns  ul li:nth-of-type(5) a{
+     background-image: url(../img/ico_inipay.png);
+     background-size: 100% 100%;
+ }
+ 
+ #footer .familySite{}
+ #footer .familySite ul li {display: inline-block; 
+      padding: 5px 0 10px;}
+ #footer .familySite ul li a{display: block;font-weight: bold;
+     color: #eee;}
+ #footer .familySite ul li a:after{
+     content:'|';padding: 0 15px;
+ }
+ #footer .familySite ul li:last-child a:after{
+     content: '';padding: 0;
+ }
+ #footer .info ul li{padding: 2px 0;}
+ #footer .info ul li:nth-child(4) a{
+     padding-left: 10px;font-weight: bold; color: red;
+ }
+ #footer .info p{padding: 5px 0 20px; margin-top: 10px;color: #ddd;}

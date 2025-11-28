@@ -1,0 +1,38 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+/* container */
+
+/* con1 - slider배치 */
+#container .con1 {width: 100%;position: relative;padding-top: 45px;}
+#container .con1 #photo{width:400%;display: block;overflow: hidden;}
+#container .con1 #photo li{float: left;width: 25%;}
+#container .con1 #photo li a img{width: 100%;}
+
+/* con2 - 상품 2*2 배치 */
+#container .con2 ul{position: relative;}
+#container .con2 ul li{position: relative; float: left;width: 50%;}
+#container .con2 ul li a img{width: 100%;}
+
+#container .con2 ul li div{position: absolute;top: 50%;width: 100%;
+    margin-top: -30px;line-height: 100%;display: block;}
+#container .con2 ul li div img{width: 18px;height: 18px;}
+
+#container .con2 ul li h2{position: absolute;top: 50%;width: 100%;
+    margin-top: -10px;line-height: 100%;display: block;color: #fff;
+    text-transform: uppercase;}
+
+ /* bestitem 배치 */
+#container .con3{background-color: rgb(105, 177, 245);
+width: 100%;padding: 5% 0;padding-bottom: 10%;
+border-bottom: 2px solid #777;}
+#container .con3 h2{margin-left: 3%;padding-bottom: 10px; text-align: left;
+font-size: 1.25em;font-weight: bold; text-transform: uppercase;
+ color: #05039c;}
+
+ #container .con3 dl{ display: inline-block;width: 23%;overflow: hidden; }
+ #container .con3 dl dt{ margin: 0 5px 5px 5px;}
+ #container .con3 dl dt img{width: 100%;}
+ #container .con3 dl dd{font-size: 0.9em;color: #555;} 
+

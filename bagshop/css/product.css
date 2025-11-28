@@ -1,0 +1,33 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+/* product style */
+
+#container7 {width: 100%;padding-bottom: 5%;
+border-bottom: 2px dashed #aac7b6;}
+
+#container7 h1{width: 50%;margin: 0 auto;
+padding:50px 0; color: blue;
+font-size: 2em;text-transform: uppercase;}
+
+#container7 h2 {width: 50%;margin: 0 auto;
+padding: 10px;color: #1a0381;font-size: 1.75em;
+text-transform: uppercase;}
+
+#container7 .con2 dl{
+    display: inline-block;
+    border: 1px solid #06f;
+    box-sizing: border-box;
+    width: 49%;overflow: hidden;
+}
+#container7 .con2 dl dt{margin:5px;}
+#container7 .con2 dl dt img{width: 100%;}
+#container7 .con2 dl dd{font-size:0.9em;
+   color: #1a0381;font-family:'나눔고딕';}
+
+#container7 .con3 dl{
+ display: inline-block;width: 32%; overflow: hidden;}
+#container7 .con3 dl dt{margin: 0 5px 5px 5px;}
+#container7 .con3 dl dt img{width: 100%;}
+#container7 .con3 dl dd{font-size: 0.75em;font-family:'나눔고딕';}

@@ -1,0 +1,43 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+/* order style */
+#container5 {width: 100%;padding-bottom: 5%;
+border-bottom: 2px solid #aac7aa; font-family: '나눔고딕';}
+#container5 h1{width: 50%;margin: 0 auto;padding: 60px 0 40px 0;
+color: #043897;font-size: 2em;}
+
+/* 회원 */
+#container5 .memberBox{width: 90%;margin: 0 auto;
+ font-family: '나눔고딕';font-size: 1.25em;padding: 10px;color: #043897;}
+#container5 .memberBox h2{width: 100%;font-size: 1.25em;color: #043897;}
+
+#container5 .memberBox input#confirmId,
+#container5 .memberBox input#confirmPw{
+   width: 80%;height: 25px;margin: 5px auto; padding: 5px 0;
+   border: none;border:1px dashed #043897;
+   background-color: #74f2f7;
+   font-size: 1em;text-indent: 10px;line-height: 25px; outline: none;}
+#container5 .memberBox .confirmBtn1 input{
+    width: 80%;margin: 10px;margin-top: 15px;padding: 5px 0;
+    border: 1px solid #043897;background-color: #5754e9;
+    color: #fff;font-family: 'Poiret One';
+    font-size: 1.25em; font-weight: bold;cursor: pointer;}
+
+/* 비회원 */
+#container5 .nomemberBox{width: 90%;margin: 0 auto;
+    font-family: '나눔고딕';font-size: 1.25em;padding: 10px;color: #043897;}
+#container5 .nomemberBox h2{width: 100%;font-size: 1.25em;color: #043897;}
+   
+#container5 .nomemberBox input#orderName,
+#container5 .nomemberBox input#orderNum{
+      width: 80%;height: 25px;margin: 5px auto; padding: 5px 0;
+      border: none;border:1px dashed #e9910e;
+      background-color: #f8e0bc;
+      font-size: 1em;text-indent: 10px;line-height: 25px; outline: none;}
+#container5 .nomemberBox .confirmBtn2 input{
+       width: 80%;margin: 10px;margin-top: 15px;padding: 5px 0;
+       border: 1px solid #926c03;background-color: #e7b750;
+       color: #fff;font-family: 'Poiret One';
+       font-size: 1.25em; font-weight: bold;cursor: pointer;}

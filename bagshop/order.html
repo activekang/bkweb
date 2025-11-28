@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문하기</title>
+    <!-- <link rel="stylesheet" href="css/order.css"> -->
+    <link rel="stylesheet" href="css/order2.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+</head>
+<body>
+    <div class="totop">
+        <a href="#top"><img src="img/btn_totop.png" alt="top"></a>
+     </div>
+    <div id="header">
+        <div class="headerwrap clear">
+           <h1 class="logo"><a href="index.html">Bag Shop Mall</a></h1>
+           <p class="menuBtn">menu</p>
+           <p class="search_bt">search</p>
+  
+            <nav class="nav">
+              <ul class="clear">
+                  <li><a href="login.html">login</a></li>
+                  <li><a href="join.html">join</a></li>
+                  <li><a href="product.html">PRODUCT</a></li>
+                  <li><a href="order.html">ORDER</a></li>
+                  <li><a href="customer.html">CUSTOM</a></li>
+              </ul>
+            </nav>
+        </div>
+        <!-- search폼 -->
+        <div class="search_wrap">
+          <form action="#" class="search_box">
+              <fieldset>
+                  <legend class="blind">검색폼</legend>
+                  <input type="search" placeholder="검색어입력">
+                  <input type="image" class="searchBtn" src="img/total_SearchBtn.png" alt="검색">
+              </fieldset> 
+          </form>
+        </div> <!-- search end-->
+    </div> <!-- header end-->
+    <!-- order page -->
+    <section id="container5">
+      <h1>주문/배송 조회</h1>
+      <div class="confirmBox">
+          <form action="#">
+            <fieldset>
+                <legend class="blind">주문배송폼</legend>
+                <div class="memberBox">
+                    <h2>회원 주문/배송 조회</h2>
+                    <p>
+                         <label for="confirmId" class="blind">ID</label>
+                         <input type="text" name="confirmId" id="confirmId"
+                           placeholder="아이디입력">
+                    </p>
+                    <p>
+                        <label for="confirmPw" class="blind">ID</label>
+                        <input type="password" name="confirmPw" id="confirmPw"
+                          placeholder="비밀번호입력">
+                   </p>
+                   <div class="confirmBtn1">
+                    <input type="submit" value="Login">
+                   </div>
+                </div>
+                <!-- 비회원 -->
+                <div class="nomemberBox">
+                    <h2>비회원 주문/배송 조회</h2>
+                    <p>
+                         <label for="orderName" class="blind">주문자명</label>
+                         <input type="text" name="orderName" id="orderName"
+                           placeholder="주문자명입력">
+                    </p>
+                    <p>
+                        <label for="orderNum" class="blind">주문번호</label>
+                        <input type="text" name="orderNum" id="orderNum"
+                          placeholder="주문번호입력">
+                   </p>
+                   <div class="confirmBtn2">
+                    <input type="submit" value="Search">
+                   </div>
+                </div>
+            </fieldset>
+          </form> 
+      </div>
+    </section> 
+    <footer id="footer">
+        <div class="adver">
+            <p><img src="img/delivery.gif" alt="배송정보"></p>
+        </div>
+        <div class="sns">
+            <ul>
+                <li><a href="#">youtbe</a></li>
+                <li><a href="#">facebook</a></li>
+                <li><a href="#">twitter</a></li>
+                <li><a href="#">pinterest</a></li>
+                <li><a href="#">inicis</a></li>
+            </ul>
+        </div>
+        <div class="familySite">
+            <ul>
+                <li><a href="#">이용약관</a></li> 
+                <li><a href="#">개인정보 취급방침</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+        </div>
+        <div class="info">
+           <ul>
+            <li>(주)BAGSHOP대표 : 김길동</li>
+            <li>사업자동록번호 : 120-86-23450</li>
+            <li>통신판매등록번호 : 서울강남-4567호</li>
+            <li>개인정보보호책임자: 김길호팀장 
+                <a href="mailto:kimkh@bagshop.com">kimkh@bagshop.com</a></li>
+           </ul>
+           <p>copyright &copy; 2024 BAG-SHOPMALL all right reserved.</p> 
+        </div>
+    </footer> <!--footer end -->
+    <script src="js/common.js"></script> 
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/login.js"></script>
+    
+</head>
+<body>
+    <div class="totop">
+        <a href="#top"><img src="img/btn_totop.png" alt="top"></a>
+     </div>
+    <div id="header">
+        <div class="headerwrap clear">
+           <h1 class="logo"><a href="index.html">Bag Shop Mall</a></h1>
+           <p class="menuBtn">menu</p>
+           <p class="search_bt">search</p>
+  
+            <nav class="nav">
+              <ul class="clear">
+                  <li><a href="login.html">login</a></li>
+                  <li><a href="join.html">join</a></li>
+                  <li><a href="product.html">PRODUCT</a></li>
+                  <li><a href="order.html">ORDER</a></li>
+                  <li><a href="customer.html">CUSTOM</a></li>
+              </ul>
+            </nav>
+        </div>
+        <!-- search폼 -->
+        <div class="search_wrap">
+          <form action="#" class="search_box">
+              <fieldset>
+                  <legend class="blind">검색폼</legend>
+                  <input type="search" placeholder="검색어입력">
+                  <input type="image" class="searchBtn" src="img/total_SearchBtn.png" alt="검색">
+              </fieldset> 
+          </form>
+        </div> <!-- search end-->
+    </div> <!-- header end-->
+    <!-- login폼 -->
+    <section id="container2">
+     <h1>Member Login</h1>
+     <div class="loginPage">
+        <form action="login_ok.php" name="frm" method="post" 
+        onsubmit="return idpwCheck()">
+          <fieldset>
+            <legend class="blind">로그인폼</legend>
+            <div class="inputText">
+              <p>
+                <label for="ida" class="blind">Member id</label>
+                <input type="text" name="ida" id="ida"
+                 placeholder="아이디입력" >
+              </p>
+              <p>
+                <label for="pwa" class="blind">Password</label>
+                <input type="password" name="pwa" id="pwa" 
+                placeholder="비밀번호입력" >
+              </p>  
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Login">
+            </div> 
+          </fieldset> 
+        </form>
+       
+        <div class="joinSearch">
+            <a href="join.html">join Member</a>
+            <a href="#">Search ID/PW</a>
+        </div>
+
+        <div class="snslink">
+           <a href="#"><img src="img/kakao.png" alt="kakao"></a>
+           <a href="#"><img src="img/naver.png" alt="naver"></a>
+           <a href="#"><img src="img/fbook.png" alt="facebook"></a>
+        </div>
+
+     </div>
+    </section>
+    <footer id="footer">
+        <div class="adver">
+            <p><img src="img/delivery.gif" alt="배송정보"></p>
+        </div>
+        <div class="sns">
+            <ul>
+                <li><a href="#">youtbe</a></li>
+                <li><a href="#">facebook</a></li>
+                <li><a href="#">twitter</a></li>
+                <li><a href="#">pinterest</a></li>
+                <li><a href="#">inicis</a></li>
+            </ul>
+        </div>
+        <div class="familySite">
+            <ul>
+                <li><a href="#">이용약관</a></li> 
+                <li><a href="#">개인정보 취급방침</a></li>
+                <li><a href="#">사이트맵</a></li>
+            </ul>
+        </div>
+        <div class="info">
+           <ul>
+            <li>(주)BAGSHOP대표 : 김길동</li>
+            <li>사업자동록번호 : 120-86-23450</li>
+            <li>통신판매등록번호 : 서울강남-4567호</li>
+            <li>개인정보보호책임자: 김길호팀장 
+                <a href="mailto:kimkh@bagshop.com">kimkh@bagshop.com</a></li>
+           </ul>
+           <p>copyright &copy; 2024 BAG-SHOPMALL all right reserved.</p> 
+        </div>
+    </footer> <!--footer end -->
+    <script src="js/common.js"></script> 
+</body>
+</html>
