@@ -1,0 +1,10 @@
+[  
+    {"item" : "오잉", "imgfile":"img/1.png", "link":"http://www.lotteconf.co.kr/ProductInfo/Product.asp?mn=010300&pcd=LC301"}, 
+    {"item" : "ABC초코렛", "imgfile":"img/2.png", "link":"http://www.lotteconf.co.kr/ProductInfo/Product.asp?mn=010300&pcd=LC302"}, 
+    {"item" : "아몬드초코렛", "imgfile":"img/3.png", "link":"http://www.lotteconf.co.kr/ProductInfo/Product.asp?mn=010300&pcd=LC303"},
+    {"item" : "치토스", "imgfile":"img/4.png", "link":"http://www.lotteconf.co.kr/ProductInfo/Product.asp?mn=010300&pcd=LC304"},
+    {"item" : "빼빼로", "imgfile":"img/5.png", "link":"http://www.lotteconf.co.kr/ProductInfo/Product.asp?mn=010300&pcd=LC305"},
+    {"item" : "꼬깔콘", "imgfile":"img/6.png", "link":"http://www.lotteconf.co.kr/ProductInfo/Product.asp?mn=010300&pcd=LC306"},
+    {"item" : "설레임", "imgfile":"img/7.png", "link":"http://www.lotteconf.co.kr/ProductInfo/Product.asp?mn=010300&pcd=LC307"},
+    {"item" : "칸쵸", "imgfile":"img/8.png", "link":"http://www.lotteconf.co.kr/ProductInfo/Product.asp?mn=010300&pcd=LC308"}
+]
