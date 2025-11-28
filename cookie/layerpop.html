@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <title>Pop-Layer실습</title>
+  <style type="text/css">
+#pop1 {width:500px;height:250px;
+position:absolute;top:40%;left:50%;
+
+background:#fff;z-index:1500;}
+/*가운데정렬을 위한 값으로 전체사이즈의 반을 마이너스로입력*/
+#pop1 .cont {width:500px;height:250px;}
+#pop1 .close {width:490px;height:30px;background:#f3f3f3; line-height:30px;padding-left:10px;font-size:13px;}
+#pop1 .close #close {float:right; margin-right:10px; cursor:pointer}
+/*#mask {width:100%;height:100%;position:fixed;background: rgba(0,0,0,0.3) repeat;top:0;left:0;z-index:999}
+*/
+</style>
+ </head>
+ <body>
+ <div id="pop1">
+  <div class="cont">
+   <img src="img/pop_img.jpg" alt="이미지에 대한 설명글" border="0"></div>
+  <div class="close">
+  <form method="post" action="" name="pop_form"> 
+   <span id="check">
+    <input type="checkbox" value="checkbox" name="chkbox" id="chkday"/><label for="chkday">오늘 하루동안 보지 않기</label>
+   </span>
+   <span id="close">닫기</span>
+  </form>
+ </div>
+</div>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+ //감추기함수정의
+ function popClose(){
+    if($("input[name='chkbox']").is(":checked") == true){
+       $("#pop1").hide();
+	   }
+}
+$(function(){
+    var chk=$("#chkday").checked; //check변수
+  
+	if(chk!=true){
+        $("#pop1").show(); //보기
+    }else{
+        $("#pop1").hide(); //감추기
+    }
+   
+	$("#close").click(function(){
+        popClose(); //함수호출
+    });
+});
+</script>
+ </body>
+</html>

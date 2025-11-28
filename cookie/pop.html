@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>새해인사</title>
+  <style type="text/css">
+#popp27 { position: absolute; width:780px; height:630px; position: absolute; top:40%; left:50%; margin-top:-250px; margin-left:-390px; background:#fff; z-index:15000;}
+/*가운데 정렬을 위한 값으로 전체 사이즈의 반을 마이너스로 입력*/
+#popp27 .cont {width:780px; height:600px;}
+
+#popp27 .cont  img{width:100%; height:100%;}
+
+#popp27 .close {width:770px; height:30px; background:#f3f3f3; line-height:30px; padding-left:10px; font-size:13px;}
+#popp27 .close #close {float:right; margin-right:10px; cursor:pointer}
+#mask {width:100%;height:100%;position:fixed;background: rgba(0,0,0,0.7) repeat;top:0;left:0;z-index:999}
+</style>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) return c.substring(name.length,c.length);
+    }
+    return "";
+} 
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+} 
+</script>
+<script>
+function couponClose(){
+    if($("input[name='chkbox']").is(":checked") ==true){
+        setCookie("close","Y",1);
+    }
+    $("#popp27").hide(); 
+    $("#mask").hide();
+}
+$(document).ready(function(){
+    cookiedata = document.cookie;
+    if(cookiedata.indexOf("close=Y")<0){
+        $("#popp27").show(); 
+    }else{
+        $("#popp27").hide(); 
+        $("#mask").hide();
+    }
+    $("#close").click(function(){
+        couponClose();
+    });
+});
+</script>
+ </head>
+ <body>
+ <div id="popp27">
+  <div class="cont">
+   <img src="img/pop2.png" alt="2022새해인사말이미지" border="0"></div>
+  <div class="close">
+  <form method="post" action="" name="pop_form"> 
+   <span id="check"><input type="checkbox" value="checkbox" name="chkbox" id="chkday"/><label for="chkday">오늘 하루동안 보지 않기</label></span>
+   <span id="close">닫기</span>
+  </form>
+ </div>
+</div>
+<div id="mask"></div>
+ </body>
+</html>
